@@ -1,11 +1,4 @@
-/*
-  TEAM 1
-  LAB EX 13
- */
-package lab.ex.pkg13;
-
-//importing packages
-
+package labex13;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -14,29 +7,28 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 
-//main class
-//using ActionListener for JButton to work
+
 public class conversi implements ActionListener {
 
     
     JTextField t,t1;
     JButton b;
     JLabel l,l1;
-    conversi()//Constructor 
+    conversi()
     {
         JFrame f=new JFrame();
         l=new JLabel("enter number of miles");
         l.setBounds(200,10,150,20);
         t=new JTextField();
         t.setBounds(200,50,150,20);
-        b=new JButton("CONVERT");//Button to perform conversion
+        b=new JButton("CONVERT");
         b.setBounds(200,100,150,20);
         l1=new JLabel("RESULTS IN km");
         l1.setBounds(200,125,150,20);
-        t1=new JTextField();//TextField to show the result
+        t1=new JTextField();
         t1.setBounds(200,150,150,20);
         b.addActionListener(this);
-        //adding swing components to the JFrame
+        
         f.add(l);
         f.add(t);
         f.add(b);
@@ -45,7 +37,7 @@ public class conversi implements ActionListener {
         f.setSize(500,500);
         f.setLayout(null);
         f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Closing the JFrame
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
     }
 
@@ -54,7 +46,7 @@ public class conversi implements ActionListener {
         String s=t.getText();
        double c=Double.parseDouble(s);
        double c1=0;
-       c1=c*1.609;//converting miles to kilometre
+       c1=c*1.609;
        String result = String.valueOf(c1);
        t1.setText(result);
        
